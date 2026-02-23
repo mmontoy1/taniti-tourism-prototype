@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Trip | Visit Taniti</title>
+  <meta name="description" content="Book your Taniti island vacation, activities, and accommodations.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="logo">Visit Taniti</h1>
+
+    <nav aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html">Attractions</a></li>
+        <li><a href="lodging.html">Lodging</a></li>
+        <li><a href="dining.html">Dining</a></li>
+        <li><a href="transportation.html">Transportation</a></li>
+        <li><a href="travel-info.html">Travel Info</a></li>
+        <li><a href="book.html" class="cta-btn" aria-current="page">Book Now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="booking-section">
+    <div class="container">
+      <h2>Book Your Taniti Experience</h2>
+      <p>Please complete the form below to reserve your stay or activity.</p>
+
+      <form id="bookingForm">
+
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="activity">Select Experience</label>
+          <select id="activity" name="activity" required>
+            <option value="">-- Choose an Option --</option>
+            <option value="beach">White Sand Beaches</option>
+            <option value="rainforest">Rainforest Tour</option>
+            <option value="volcano">Volcano Excursion</option>
+            <option value="hotel">Hotel Stay</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="arrival">Arrival Date</label>
+          <input type="date" id="arrival" name="arrival" required>
+        </div>
+
+        <div class="form-group">
+          <label for="days">Number of Days</label>
+          <input type="number" id="days" name="days" min="1" max="30" required>
+        </div>
+
+        <div class="form-group">
+          <label for="guests">Number of Guests</label>
+          <input type="number" id="guests" name="guests" min="1" max="10" required>
+        </div>
+
+        <button type="submit" class="primary-btn">Confirm Booking</button>
+
+      </form>
+
+      <p id="confirmationMessage" class="confirmation"></p>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 Visit Taniti Tourism Board. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("bookingForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    document.getElementById("confirmationMessage").textContent =
+      "Thank you! Your booking request has been received. A confirmation email will be sent shortly.";
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
