@@ -35,3 +35,14 @@ The website was developed as part of a UX design process including:
 ---
 
 ## Project Structure
+taniti-tourism-site/
+│
+├── index.html
+├── attractions.html
+├── lodging.html
+├── dining.html
+├── transportation.html
+├── travel-info.html
+├── book.html
+├── styles.css
+└── script.js
